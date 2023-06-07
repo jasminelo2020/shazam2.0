@@ -27,9 +27,11 @@ def top_barchart(top_genres):
 
 def waveform_viz(y, onsets):
     fig, ax = plt.subplots()
-    plt.plot(y[:onsets[30]])
-    for onset in onsets[:30]:
+    plt.plot(y[:onsets[40]])
+    for onset in onsets[:40]:
         plt.axvline(x = onset, color = 'r', linestyle = 'dashed')
+    plt.xlabel('samples')
+    plt.ylabel('amplitude')
     return fig
 
 def pitch_viz(pitch_array):
@@ -96,6 +98,11 @@ if st.button("click here"):
             """.format(top_song, n))
             barchart_viz = top_barchart(to_plot)
             st.pyplot(fig=barchart_viz, clear_figure=None, use_container_width=True)
+
+            # full results
+            with st.expander("See full result"):
+                st.write(genres)
+
         
         # waveform visualization
         with tab2:
@@ -107,7 +114,7 @@ if st.button("click here"):
             Here is the visualization of the waveform of your song:
             """)
             y, sr = librosa.load('output.wav')
-            onsets = librosa.onset.onset_detect(y = y, sr = sr, units = 'samples')
+            onsets = librosa.onset.onset_detect(y = y[22050*3:-22050*3], sr = sr, units = 'samples')
             waveform_visualization = waveform_viz(y, onsets)
             st.pyplot(fig=waveform_visualization, clear_figure=None, use_container_width=True)
 
@@ -144,7 +151,4 @@ if st.button("click here"):
             timbre_visualization = timbre_viz(y)
             st.pyplot(fig=timbre_visualization, clear_figure=None, use_container_width=True)
 
-        # full results
-        with st.expander("See full result"):
-            st.write(genres)
 

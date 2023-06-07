@@ -126,7 +126,8 @@ if st.button("click here"):
             into 12 bands called chroma features, where each band corresponds to 
             musical notes from C to B. The first element corresponds to C, 
             specifically it is the sum of the energy of all frequency bands 
-            corresponding to C.
+            corresponding to C. A value close to 1 means that band was dominant in
+            that sample.
 
             Here is the visualization of the pitch of your song:
             """)

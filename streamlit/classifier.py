@@ -3,7 +3,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 import streamlit as st
 import librosa
-import forty_model 
+import model 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -49,7 +49,7 @@ def pitch_viz(pitch_array):
 def timbre_viz(y_segments):
     plt.figure(figsize = (7, 4))
 
-    timbre = forty_model.create_timbre_and_pitch('output.wav', 40)[0]
+    timbre = model.create_timbre_and_pitch('output.wav', 40)[0]
 
     fig, ax = plt.subplots()
     plt.imshow(timbre.T)
@@ -68,7 +68,7 @@ if st.button("click here"):
     with st.spinner('Analyzing song contents...'):
 
         # model
-        genres = forty_model.predict_genre('output.wav', 40)
+        genres = model.predict_genre('output.wav', 40)
 
         # show top n genres classified
         n = 5
@@ -123,7 +123,7 @@ if st.button("click here"):
 
             Here is the visualization of the pitch of your song:
             """)
-            pitch = forty_model.create_timbre_and_pitch('output.wav', 40)[-1]
+            pitch = model.create_timbre_and_pitch('output.wav', 40)[-1]
             pitch_visualization = pitch_viz(pitch)
             st.pyplot(fig=pitch_visualization, clear_figure=None, use_container_width=True)
         
@@ -147,4 +147,4 @@ if st.button("click here"):
         # full results
         with st.expander("See full result"):
             st.write(genres)
-            
+

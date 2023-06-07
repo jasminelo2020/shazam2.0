@@ -30,8 +30,8 @@ def waveform_viz(y, onsets):
     plt.plot(y[:onsets[40]])
     for onset in onsets[:40]:
         plt.axvline(x = onset, color = 'r', linestyle = 'dashed')
-    plt.xlabel('samples')
-    plt.ylabel('amplitude')
+    plt.xlabel('Samples')
+    plt.ylabel('Amplitude')
     return fig
 
 def pitch_viz(pitch_array):

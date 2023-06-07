@@ -10,7 +10,11 @@ import librosa
 import matplotlib.pyplot as plt
 
 device = 'cpu'
-# print(f"Using {device} device")
+
+# models used, number of segments used in model (easily update here)
+genre_model = '40_segments_epochs_180.pth'
+timbre_model = 'timbre_model_epoch_21.pth'
+num_segments = 40
 
 # genre classifcation model
 class TwoChannelCNN(nn.Module):
@@ -41,8 +45,8 @@ class TwoChannelCNN(nn.Module):
 
     def forward(self, x):
         # x has shape (batch_size, 2, 50, 12)
-        x1 = x[:, 0, :40, :].unsqueeze(1)  # shape: (batch_size, 1, 50, 12)
-        x2 = x[:, 1, :40, :].unsqueeze(1)  # shape: (batch_size, 1, 50, 12)
+        x1 = x[:, 0, :num_segments, :].unsqueeze(1)  # shape: (batch_size, 1, num_segments, 12)
+        x2 = x[:, 1, :num_segments, :].unsqueeze(1)  # shape: (batch_size, 1, num_segments, 12)
 
         out1 = self.layer1(x1)  # shape: (batch_size, 64, 6, 3)
         out2 = self.layer2(x2)  # shape: (batch_size, 64, 6, 3)
@@ -76,12 +80,12 @@ class timbre_gen(nn.Module):
 # loading in the genre classifier model
 # 15 for 15 genres
 genre_model = TwoChannelCNN(15).to(device)
-trained_model = torch.load('40_segments_epochs_180.pth', map_location = torch.device('cpu'))
+trained_model = torch.load(genre_model, map_location = torch.device('cpu'))
 genre_model.load_state_dict(trained_model)
 
 # loading in the timbre generation model
 timbre_model = timbre_gen().to(device)
-saved_model = torch.load('timbre_model_epoch_21.pth', map_location = torch.device('cpu'))
+saved_model = torch.load(timbre_model, map_location = torch.device('cpu'))
 timbre_model.load_state_dict(saved_model)
 
 def normalize_length(y):
@@ -128,8 +132,8 @@ def create_timbre_and_pitch(filename, n):
 def predict_genre(filename, segments):
     timbres, pitches = create_timbre_and_pitch(filename, segments)
 
-    timbres = torch.from_numpy(timbres).unsqueeze(0).unsqueeze(0)  # shape: (1, 1, 40, 12)
-    pitches = torch.from_numpy(pitches).unsqueeze(0).unsqueeze(0)  # shape: (1, 1, 40, 12)
+    timbres = torch.from_numpy(timbres).unsqueeze(0).unsqueeze(0)  # shape: (1, 1, num_segments, 12)
+    pitches = torch.from_numpy(pitches).unsqueeze(0).unsqueeze(0)  # shape: (1, 1, num_segments, 12)
 
     input_tensor = torch.cat((timbres, pitches), dim=1)
 

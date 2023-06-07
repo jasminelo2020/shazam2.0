@@ -1,0 +1,7 @@
+We were set on training a deep neural network that would take in pitch and/or timbre as input and would classify genre.
+We tested models that had no convolution layers, we tested models with convolution layers that only accepted timbre or 
+pitch as input, and we also tested the number of segments that the model would take in. After this testing, we decided 
+on a 40 segment model that had two convolution layers for timbre and pitch separately, which would then be combined and
+processed through three dense layers. 
+
+The training data used the 

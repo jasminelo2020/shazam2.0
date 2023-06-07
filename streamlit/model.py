@@ -10,10 +10,7 @@ import librosa
 import matplotlib.pyplot as plt
 
 device = 'cpu'
-
-# models used, number of segments used in model (easily update here)
-genre_model = '40_segments_epochs_180.pth'
-timbre_model = 'timbre_model_epoch_21.pth'
+# print(f"Using {device} device")
 num_segments = 40
 
 # genre classifcation model
@@ -80,12 +77,12 @@ class timbre_gen(nn.Module):
 # loading in the genre classifier model
 # 15 for 15 genres
 genre_model = TwoChannelCNN(15).to(device)
-trained_model = torch.load(genre_model, map_location = torch.device('cpu'))
+trained_model = torch.load('40_segments_epochs_180.pth', map_location = torch.device('cpu'))
 genre_model.load_state_dict(trained_model)
 
 # loading in the timbre generation model
 timbre_model = timbre_gen().to(device)
-saved_model = torch.load(timbre_model, map_location = torch.device('cpu'))
+saved_model = torch.load('timbre_model_epoch_21.pth', map_location = torch.device('cpu'))
 timbre_model.load_state_dict(saved_model)
 
 def normalize_length(y):

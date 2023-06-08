@@ -1,7 +1,7 @@
 # takes in the track_id and a getter function
 # locates that file in the MillionSongSubset directory, and applies the function to the hdf5 file
 
-import hdf5_getters as getters
+import eda.hdf5_getters as getters
 import os
 import glob
 

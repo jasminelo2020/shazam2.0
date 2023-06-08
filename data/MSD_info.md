@@ -18,11 +18,10 @@ To get MSD data,
 6. Open the command line for the server you're trying to copy the data over to (We SSHed into the uni servers).
 7. Create a password.pem file and put it somewhere on your local machine. You'll need to copy files.
 8. Use the rsync or scp command in the terminal of your local machine to start copying over the files over internet.
-The exact command we used was:
-$ rsync -aP --ignore-existing -e "ssh -i ~/private/password.pem" ec2-user@ec2-54-196-46-61.compute-1.amazonaws.com:/mnt/snap/data ~/public
-- the aP flag means recursively go into all directories, and be verbose (display messages in the terminal window)
-- we specify with the -e flag that we want to ssh into the ec2 machine using password.pem as the key
-- "/mnt/snap/data" is the directory where the MSD is. and "~/public" is where we want to copy the MSD to
+    - The exact command we used was: `$ rsync -aP --ignore-existing -e "ssh -i ~/private/password.pem" ec2-user@ec2-54-196-46-61.compute-1.amazonaws.com:/mnt/snap/data ~/public`
+    - the aP flag means recursively go into all directories, and be verbose (display messages in the terminal window)
+    - we specify with the -e flag that we want to ssh into the ec2 machine using password.pem as the key
+    - "/mnt/snap/data" is the directory where the MSD is. and "~/public" is where we want to copy the MSD to
 
 
 I will provide some of the code I used to extract pertinent.

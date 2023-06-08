@@ -1,4 +1,4 @@
-import hdf5_getters as getters
+import eda.hdf5_getters as getters
 import numpy as np
 import os
 import glob

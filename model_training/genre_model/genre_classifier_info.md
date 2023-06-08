@@ -7,7 +7,7 @@ processed through three dense layers. More detailed info can be found on our pos
 
 ## Model
 ### Training
-The code used for the training of the genre model is provided in `NN_with_log.py`. The model works on 40 segments, and
+The code used for the training of the genre model is provided in `NN_with_log.ipynb`. The model works on 40 segments, and
 takes in an input of (batch_size, 1, 40, 12) for pitch and timbre respectively.
 - Training Loss: 0.207295
 - Validation Loss: 0.019888 

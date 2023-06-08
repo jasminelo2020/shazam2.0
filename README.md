@@ -23,7 +23,10 @@ at a genre classification.
 ## About This Repo
 This repo contains the code that our group used to create the genre classifier. It will walk you through the exploratory
 data analysis (EDA), data preprocessing, model training, and how we created our deliverable with streamlit. Each
-section has some python, alongside a .txt file that walks you through the steps. 
+section has some python, alongside a markdown file that walks you through the steps.
+
+## Some final thoughts
+
 
 ## Contact
 So Hirota

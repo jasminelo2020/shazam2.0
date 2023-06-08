@@ -5,7 +5,8 @@ included as the notebook, but I encourage you do your own exploration.
 Some Notes:
 - The `hdf5_getters.py` file is provided by MSD, and it is the way you access metrics from .h5 files. Each song is its
 own .h5 file, and the name of the file corresponds to its trackID.
-- This EDA was done on the MSD subset (around a gigabyte in size). It is available on the MSD website as a direct download link (unlike the entire dataset). This way you can get your hands dirty with the actual dataset, but in
+- This EDA was done on the MSD subset (around a gigabyte in size). It is available on the MSD website as a direct download 
+link (unlike the entire dataset). This way you can get your hands dirty with the actual dataset, but in
 an accessible manner.
 - `get_metric.py` is useful for getting a certain metric about a song. Like if you wanted to figure out the song title
-of a song with TrackID of TRARREF128F422FD96, pass the TrackID and the getters.get_title function.
+of a song with TrackID of `TRARREF128F422FD96`, pass the TrackID and the `getters.get_title` function.

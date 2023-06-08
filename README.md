@@ -29,9 +29,11 @@ section has some python, alongside a .txt file that walks you through the steps.
 So Hirota
 - Email: hirotaso92602@gmail.com
 - Github: [soh09](github.com/soh09)
+
 Sean Furhman
 - Email: seantfuhrman@gmail.com
 - Website: [seanfuhrman.com](seanfuhrman.com)
+
 Jasmine Lo
 - Email: j2lo@ucsd.edu
 - Github: [jasminelo2020](github.com/jasminelo2020)

@@ -26,9 +26,9 @@ data analysis (EDA), data preprocessing, model training, and how we created our 
 section has some python, alongside a markdown file that walks you through the steps.
 
 ## Acknowledgments
-Thanks to DAn Ellis for the massive help with timbre and pitch. [DAn's Github](https://github.com/dpwe)
-Thanks to DS3 for providing us with guidance and financial resources to use AWS.
-Thanks to UCSD IT Services for allowing us to utilize computing resources for data processing and model training.
+- Thanks to DAn Ellis for the massive help with timbre and pitch. [DAn's Github](https://github.com/dpwe)
+- Thanks to DS3 for providing us with guidance and financial resources to use AWS.
+- Thanks to UCSD IT Services for allowing us to utilize computing resources for data processing and model training.
 
 
 ## Contact

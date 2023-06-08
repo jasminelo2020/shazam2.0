@@ -28,13 +28,13 @@ section has some python, alongside a .txt file that walks you through the steps.
 ## Contact
 So Hirota
 - Email: hirotaso92602@gmail.com
-- Github: [soh09](github.com/soh09)
+- Github: [soh09](https://github.com/soh09)
 
 Sean Furhman
 - Email: seantfuhrman@gmail.com
-- Website: [seanfuhrman.com](seanfuhrman.com)
+- Website: [seanfuhrman.com](https://seanfuhrman.com)
 
 Jasmine Lo
 - Email: j2lo@ucsd.edu
-- Github: [jasminelo2020](github.com/jasminelo2020)
+- Github: [jasminelo2020](https://github.com/jasminelo2020)
 

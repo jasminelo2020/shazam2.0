@@ -5,7 +5,8 @@ Music Genre Classifier Project for Data Science Student Society @ UCSD
 Shazam is a service that can identify a song based on a short segment of a song. Our project aims to create a similar 
 product which can determine the genre of a song, Shazam style. We utilized the Million Song dataset and various Python 
 packages to create a CNN model that classifies the song genre of raw audio data. This GitHub repository contains our 
-code from the process of creating our models and deliverable, a song genre classifier.
+code from the process of creating our models and deliverable, a song genre classifier. Make sure to check out [our poster](shazam2.0-poster.pdf)
+for a overview of our project!
 
 ## Dataset
 The Million Song Dataset (MSD) is a collection of audio features and metadata for 1 million songs published before 2012.
@@ -18,7 +19,7 @@ project, we are interested in segments, pitch, and timbre.
 ## Final Deliverable
 Our deliverable is a genre classifier tool that we created using Streamlit. The website prompts you to record some
 snippet of a song and the model will classify the genres, as well as showing you other metrics it calculated to arrive
-at a genre classification.
+at a genre classification. 
 
 ## About This Repo
 This repo contains the code that our group used to create the genre classifier. It will walk you through the exploratory

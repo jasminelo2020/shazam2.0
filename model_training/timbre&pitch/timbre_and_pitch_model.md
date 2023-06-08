@@ -1,7 +1,7 @@
 Timbre and pitch was the greatest challenge we faced through this entire project. The reason being that the company that
 provided the API to retrieve timbre and pitch got bought out, meaning there was no way for us to generate pitch and
 timbre features from raw audio data. This is a huge issue, since our whole project idea is that we want to create a 
-music genre classifier that works just like shazam: it needs to work on short audio recordings. 
+music genre classifier that works just like Shazam: it needs to work on short audio recordings. 
 Our genre model works very well (99.6% accuracy) if we can give it good timbre and pitch information; so the challenge
 was figuring out how we could do this.
 

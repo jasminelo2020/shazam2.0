@@ -25,7 +25,10 @@ This repo contains the code that our group used to create the genre classifier. 
 data analysis (EDA), data preprocessing, model training, and how we created our deliverable with streamlit. Each
 section has some python, alongside a markdown file that walks you through the steps.
 
-## Some final thoughts
+## Acknowledgments
+Thanks to DAn Ellis for the massive help with timbre and pitch. [DAn's Github](https://github.com/dpwe)
+Thanks to DS3 for providing us with guidance and financial resources to use AWS.
+Thanks to UCSD IT Services for allowing us to utilize computing resources for data processing and model training.
 
 
 ## Contact
@@ -38,6 +41,6 @@ Sean Furhman
 - Website: [seanfuhrman.com](https://seanfuhrman.com)
 
 Jasmine Lo
-- Email: j2lo@ucsd.edu
+- Email: jasmine.lo.2020@gmail.com
 - Github: [jasminelo2020](https://github.com/jasminelo2020)
 

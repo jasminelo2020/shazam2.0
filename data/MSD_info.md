@@ -12,7 +12,7 @@ To get MSD data,
 1. Make an AWS account
 2. Create an EC2 instance in a specific region (I think it was us-east-1). It needs to be in the same region as the MSD snapshot is.
 3. Make sure you create a key-pair for the EC2 instance, since you'll need it later.
-3. Create a disk that is 500GB and attack it to your EC2 instance.
+3. Create a disk that is 500GB and attach it to your EC2 instance.
 4. Attach the MSD snapshot to this 500GB disk.
 5. You should be able to find the MSD somewhere in your file system, accessible from the console window in AWS.
 6. Open the command line for the server you're trying to copy the data over to (We SSHed into the uni servers).

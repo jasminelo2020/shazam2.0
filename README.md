@@ -38,7 +38,7 @@ So Hirota
 - Github: [soh09](https://github.com/soh09)
 
 Sean Furhman
-- Email: seantfuhrman@gmail.com
+- Email: sean@seanfuhrman.com
 - Website: [seanfuhrman.com](https://seanfuhrman.com)
 
 Jasmine Lo

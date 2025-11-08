@@ -8,6 +8,7 @@ from tqdm import tqdm
 
 import librosa
 import matplotlib.pyplot as plt
+import os
 
 device = 'cpu'
 # print(f"Using {device} device")
@@ -121,7 +122,8 @@ class pitch_gen(nn.Module):
 # loading in the genre classifier model
 # 15 for 15 genres
 genre_model = TwoChannelCNN(15).to(device)
-trained_model = torch.load('../model/40_segments_epochs_180.pth', map_location = torch.device('cpu'))
+model_path = os.path.join(os.path.dirname(__file__), '..', 'model', '40_segments_epochs_180.pth')
+trained_model = torch.load(model_path, map_location = torch.device('cpu'))
 genre_model.load_state_dict(trained_model)
 
 # loading in the timbre generation model

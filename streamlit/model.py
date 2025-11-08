@@ -122,20 +122,20 @@ class pitch_gen(nn.Module):
 # loading in the genre classifier model
 # 15 for 15 genres
 genre_model = TwoChannelCNN(15).to(device)
-model_path = os.path.join(os.path.dirname(__file__), '..', 'model', '40_segments_epochs_180.pth')
-trained_model = torch.load(model_path, map_location = torch.device('cpu'))
+# model_path = os.path.join(os.path.dirname(__file__), '..', 'model', '40_segments_epochs_180.pth')
+trained_model = torch.load('model/40_segments_epochs_180.pth', map_location = torch.device('cpu'))
 genre_model.load_state_dict(trained_model)
 
 # loading in the timbre generation model
 timbre_model = timbre_gen().to(device)
-model_path = os.path.join(os.path.dirname(__file__), '..', 'model', 'small_specgram_timbre_model_epoch_60_best.pth')
-saved_model = torch.load(model_path, map_location = torch.device('cpu'))
+# model_path = os.path.join(os.path.dirname(__file__), '..', 'model', 'small_specgram_timbre_model_epoch_60_best.pth')
+saved_model = torch.load('model/small_specgram_timbre_model_epoch_60_best.pth', map_location = torch.device('cpu'))
 timbre_model.load_state_dict(saved_model['model_state_dict'])
 
 # loading in the pitch generation model
 pitch_model = pitch_gen().to(device)
-model_path = os.path.join(os.path.dirname(__file__), '..', 'model', 'pitch_cnn_model_epoch_14.pth')
-saved_model = torch.load(model_path, map_location = torch.device('cpu'))
+# model_path = os.path.join(os.path.dirname(__file__), '..', 'model', 'pitch_cnn_model_epoch_14.pth')
+saved_model = torch.load('model/pitch_cnn_model_epoch_14.pth', map_location = torch.device('cpu'))
 pitch_model.load_state_dict(saved_model)
 
 def normalize_length(y):

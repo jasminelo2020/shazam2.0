@@ -1,4 +1,5 @@
 streamlit
+python-3.11
 pandas
 sounddevice
 librosa

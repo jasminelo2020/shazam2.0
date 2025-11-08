@@ -1,3 +1,4 @@
 pandas
+portaudio19-dev
 sounddevice
 librosa
